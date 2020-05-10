@@ -123,8 +123,8 @@ move_up_sound = pygame.mixer.Sound('sound/Jet_up.ogg')
 move_down_sound = pygame.mixer.Sound('sound/Jet_down.ogg')
 collision_sound = pygame.mixer.Sound('sound/Boom.ogg')
 
-move_up_sound.set_volume(0.8)
-move_down_sound.set_volume(0.8)
+move_up_sound.set_volume(0.6)
+move_down_sound.set_volume(0.6)
 collision_sound.set_volume(1.0)
 
 running = True

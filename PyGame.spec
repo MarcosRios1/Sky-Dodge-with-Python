@@ -4,7 +4,7 @@ block_cipher = None
 
 
 a = Analysis(['PyGame.py'],
-             pathex=['/home/marcos/Documents/PyProjects-Linux/PyGame - Space One'],
+             pathex=['/Users/Marcos/Desktop'],
              binaries=[],
              datas=[],
              hiddenimports=[],
@@ -31,3 +31,7 @@ exe = EXE(pyz,
           upx_exclude=[],
           runtime_tmpdir=None,
           console=False )
+app = BUNDLE(exe,
+             name='PyGame.app',
+             icon=None,
+             bundle_identifier=None)
