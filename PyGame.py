@@ -107,8 +107,10 @@ player = Player()
 
 enemies = pygame.sprite.Group()
 clouds = pygame.sprite.Group()
+players = pygame.sprite.Group()
 all_sprites = pygame.sprite.Group()
 all_sprites.add(player)
+players.add(player)
 
 ### SOUND SOURCE : Chris Bailey artistname Tripnet
 ### License: https://creativecommons.org/licenses/by/3.0/
@@ -162,7 +164,9 @@ while running:
         screen.blit(entity.surf, entity.rect)
 
     if pygame.sprite.spritecollideany(player, enemies):
-        player.kill()
+        for e in enemies:
+            if pygame.sprite.spritecollideany(e, players):
+                e.kill()
 
         move_up_sound.stop()
         move_down_sound.stop()
@@ -171,7 +175,8 @@ while running:
         collision_sound.play()
         pygame.time.delay(500)
         
-        running = False
+        player.rect.center = (0,0) 
+        #running = False
     
     pygame.display.flip()
 
