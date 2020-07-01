@@ -3,4 +3,4 @@
 
 Made using the PyGame library, needs slight adjusting to run optimally on Mac OS due to retina display.
 
-<img src="https://i.imgur.com/iukkxfn.png" alt="Preview">
+<img src="https://i.imgur.com/iukkxfn.png" title="Preview">
